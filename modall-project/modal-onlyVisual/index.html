@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only modal for visual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="modal-wrapper">
+            <h1>My first modal 🙌</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A quia aspernatur quo odio, hic eos necessitatibus exercitationem qui ratione et illum ipsa. Expedita modi id quod, incidunt cum inventore doloremque.</p>
+            <div class="close-btn" id="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+      
+    </div>
+
+    <button class="open-btn" id="open">
+        Open Modal
+    </button>
+
+
+    <script defer>
+        const closeBtn = document.querySelector('#close');
+        const openBtn = document.querySelector('#open');
+
+        openBtn.addEventListener('click', function(){
+            document.querySelector('.overlay').classList.add('active');
+            document.querySelector('.modal').classList.add('active');
+            document.querySelector(body).classList.add('active');
+        })
+
+        closeBtn.addEventListener('click', function(){
+            document.querySelector('.overlay').classList.remove('active');
+            document.querySelector('.modal').classList.remove('active');
+            document.querySelector(body).classList.remove('active');
+        })
+    </script>
+</body>
+</html>
